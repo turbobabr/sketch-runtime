@@ -18,25 +18,35 @@ This framework allows to manage actions within [Sketch DevTools Assistant](https
 
 Currently the only supported action is `onLaunch`. This action allows to execure a script when Sketch App is launched. This is very useful when you need to initialize custom framework using Mocha Runtime or cache CocoaScript modules for production plugins.
 
-Registering action that executes script stored in a file:
+**Registering action that executes script stored in a file:**
 ```
 SketchRuntime.registerAction(id,name,origin,filePath)
 ```
+Where:
+- `id` - Action identifier. It's used to access existing action later with other methods like `unregisterAction`. It shoule be qunique for every script you want to be executed on Sketch App launch.
+- `name` - A human redable name for the action, e.g "Initialize Developer Tools"
+- `origin` - A string that tells to assistant app who or what registered this action, e.g "Sketch DevTools" or "Space Kitty".
+- `filePath` - A file path to the CocoaScript that is going to be executed on Sketch App launch. The file itself might have any extenstion, e.g ".js", ".jstalk", ".sketchplugin"
 
-Registering action that executes script provided as a string:
+**Registering action that executes script provided as a string:**
 ```
 SketchRuntime.registerActionWithSource(id,name,origin,scriptSource)
 ```
 
-Unregistering existing action:
+**Unregistering existing action:**
 ```
 SketchRuntime.unregisterAction(id)
 ```
+Where:
+- `id` - Identifier of an action to be unregistered and removed from execution list.
 
-Enabling/disabling existing action:
+**Enabling/disabling existing action:**
 ```
 SketchRuntime.enableAction(id,enabled)
 ```
+Where:
+- `id` - Identifier of an action to be modified.
+- `enabled` - A boolean value...
 
 ### Caching modules
 
