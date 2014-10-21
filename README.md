@@ -7,16 +7,16 @@ Sketch Runtime is a CocoaScript framework that allows remotely manage `Scriptabl
 
 ### Usage
 
+To use the framework just clone this repo and import the module:
 ```JavaScript
-#import './cocoascript_modules/sketch-runtime/sketch-runtime.js'
-// SketchRuntime object is available now.
+#import './sketch-runtime.js'
 ```
 
 ### Managing Scriptable Actions
 
-This framework allows to manage actions within [Sketch DevTools Assistant](https://github.com/turbobabr/sketch-devtools-assistant). Scriptable action allow to execute certain scripts when some `action` happens in Sketch App.
+This framework provides API to remotely manage actions within [Sketch DevTools Assistant](https://github.com/turbobabr/sketch-devtools-assistant). Scriptable action itself allows to execute certain scripts when some `action` happens in Sketch App.
 
-Currently the only supported action is `onLaunch`. This action allows to execure a script when Sketch App is launched. This is very useful when you need to initialize custom framework using Mocha Runtime or cache CocoaScript modules for production plugins.
+Currently the only supported action is `onLaunch`. This type of action executes a script when Sketch App is launched. It's very useful when you need to initialize custom framework using Mocha Runtime or cache CocoaScript modules for production plugins.
 
 **Registering action that executes script stored in a file:**
 ```
