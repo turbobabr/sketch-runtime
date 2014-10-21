@@ -1,3 +1,9 @@
+// sketch-runtime.js
+// http://github.com/turbobabr/sketch-runtime
+// (c) 2014 Andrey Shakhmin
+// May be freely distributed under the MIT license.
+
+
 (function(){
     var root=this;
 
