@@ -22,7 +22,7 @@ Unregistering actions
 
 > TODO: Contente goes here.
 
-*Playground.sketchplugin* source code:
+**Playground.sketchplugin** source code:
 ```JavaScript
 #import './sketch-runtime.js'
 
@@ -33,14 +33,14 @@ var mainScriptPath=rootPath+"/main.js";
 SketchRuntime.run("com.turbobabr.playground",initScriptPath,mainScriptPath);
 ```
 
-*init.js* source code:
+**init.js** source code:
 ```JavaScript
 #import 'libs/underscore.js'
 #import 'libs/path-builder.js'
 #import 'libs/layer.js'
 ```
 
-*main.js* source code:
+**main.js** source code:
 ```JavaScript
 (function(){
     _.each(selection,function(layer){
